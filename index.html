@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05070d" />
+    <title>HARISH.SYS - Data x AI x Software x 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="boot" id="boot" aria-live="polite">
+      <div class="boot__mark">H.SYS / 2026</div>
+      <div class="boot__body"><p id="bootStatus">INITIALIZING SYSTEMS</p><div class="boot__track"><i id="bootBar"></i></div><span id="bootPercent">00</span></div>
+      <button id="enter" hidden>ENTER SYSTEM <b>+</b></button>
+    </div>
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="hud"><a class="brand" href="#top">HARISH<span>.SYS</span></a><span class="hud__meta">HYDERABAD, IN <i></i> AVAILABLE</span><button class="menu" id="menu" aria-expanded="false">INDEX <span>+</span></button></header>
+    <nav class="nav" id="nav" aria-label="Portfolio navigation">
+      <a href="#data"><small>01</small> DATA SYSTEMS</a><a href="#ai"><small>02</small> AI / SOFTWARE</a><a href="#neural"><small>03</small> NEURAL GRAPHICS</a><a href="#trajectory"><small>04</small> TRAJECTORY</a><a href="#contact"><small>05</small> CONTACT</a>
+    </nav>
+    <aside class="progress"><span id="chapter">00</span><div><i id="progressLine"></i></div><span>05</span></aside>
+
+    <main id="top">
+      <section class="hero panel" data-chapter="00">
+        <p class="eyebrow">SCROLL TO NAVIGATE <span>+</span></p>
+        <div class="hero__center reveal"><p class="systemline">SYSTEM ONLINE <i></i> HYDERABAD / INDIA</p><h1>HARISH<br/><em>S</em></h1><p class="hero__role">DATA ENGINEER <b>x</b> AI SYSTEMS <b>x</b> SOFTWARE <b>x</b> 3D</p></div>
+        <div class="hero__footer reveal"><p>I build reliable data pipelines, intelligent products, and immersive technical systems that turn raw signal into usable decisions.</p><p>EXPLORE THE<br/>DATA CORE <b>+</b></p></div>
+      </section>
+
+      <section class="panel intro" data-chapter="01">
+        <p class="eyebrow">01 / THE DATA CORE</p>
+        <div class="reveal"><p class="intro__lead">BUILDING<br/>SYSTEMS THAT <em>SCALE.</em></p><p class="intro__copy">My strongest work sits where cloud data engineering meets product thinking: clean architecture, automation, measurable performance, and interfaces people can actually use.</p></div>
+        <div class="systems"><span>DATA</span><span>AI</span><span>SOFTWARE</span><span>3D</span></div>
+      </section>
+
+      <section class="panel data" id="data" data-chapter="01">
+        <div class="section-title reveal"><p class="eyebrow">01 / DATA ENGINEERING</p><h2>CLOUD DATA<br/><em>IN MOTION.</em></h2></div>
+        <div class="pipeline" id="pipeline">
+          <button data-node="SOURCE">SOURCE</button><i></i><button data-node="ADF">ADF</button><i></i><button data-node="ADLS">ADLS</button><i></i><button data-node="DATABRICKS">DATABRICKS</button><i></i><button data-node="DELTA">DELTA</button><i></i><button data-node="GOLD">GOLD</button>
+        </div>
+        <p class="detail" id="pipelineDetail">SELECT A SYSTEM NODE TO INSPECT THE PIPELINE.</p>
+      </section>
+
+      <section class="metrics panel" data-chapter="01">
+        <p class="eyebrow">SYSTEM THROUGHPUT / RESUME SIGNALS</p>
+        <div class="metrics__grid reveal"><div><strong data-count="2">0</strong><strong>M<span>+</span></strong><p>RECORDS / DAY</p></div><div><strong data-count="40">0</strong><strong><span>%</span></strong><p>FASTER PROCESSING</p></div><div><strong data-count="50">0</strong><strong><span>+</span></strong><p>CRITICAL TABLES</p></div><div><strong data-count="99.9">0</strong><strong><span>%</span></strong><p>PIPELINE UPTIME</p></div></div>
+        <p class="metrics__note">Azure Data Factory, ADLS Gen2, Databricks, PySpark, Delta Lake, medallion architecture, monitoring, CI/CD.</p>
+      </section>
+
+      <section class="panel ai" id="ai" data-chapter="02">
+        <p class="eyebrow">02 / INTELLIGENT INTERFACES</p>
+        <div class="section-title reveal"><h2>FROM SIGNAL<br/>TO <em>DECISION.</em></h2><p>Software work focused on intelligent workflows: voice agents, REST APIs, data-backed evaluations, secure realtime state, and fast retrieval.</p></div>
+        <div class="case reveal"><div class="case__number">01</div><div><p class="case__type">AI INTERVIEW AGENT</p><h3>CANDIDATE <span>-></span> VOICE <span>-></span> AGENT <span>-></span> REPORT</h3><p>Vapi, React, REST APIs, evaluation flows, and candidate automation.</p></div><button class="case__open">VIEW SYSTEM <b>+</b></button></div>
+        <div class="case reveal"><div class="case__number">02</div><div><p class="case__type">REAL-TIME BACKEND</p><h3>CLIENT <span>-></span> API <span>-></span> FIREBASE <span>-></span> DATA</h3><p>Authentication, realtime state for 500+ users, scraping workflows, and latency-focused data modeling.</p></div><button class="case__open">VIEW SYSTEM <b>+</b></button></div>
+      </section>
+
+      <section class="panel neural" id="neural" data-chapter="03">
+        <p class="eyebrow">03 / NEURAL GRAPHICS</p><div class="neural__copy reveal"><p class="giant">POINT<br/><em>CLOUD</em></p><div><p>Before data pipelines, I was experimenting with spatial data: NeRF, COLMAP, Unreal Engine, MetaHuman, AR/VR, and 3D model generation.</p><p class="publication">PUBLICATION: NEURAL GRAPHICS PRIMITIVE - METAHUMAN IN UNREAL ENGINE USING NERF</p></div></div>
+        <div class="achievement reveal"><span>01</span><div><p>IEI 2023</p><h3>RUNNER-UP</h3><p>3D HYDRO FLOOD MODEL / NERF</p></div><span>UNREAL ENGINE<br/>METAHUMAN<br/>COLMAP</span></div>
+      </section>
+
+      <section class="panel trajectory" id="trajectory" data-chapter="04">
+        <p class="eyebrow">04 / TRAJECTORY</p><h2 class="reveal">THE WORK<br/>KEEPS <em>EVOLVING.</em></h2>
+        <div class="timeline reveal"><article><p>2024</p><h3>PRODUCT<br/>SOFTWARE</h3><span>React / APIs / Firebase / Vapi</span></article><article><p>2025</p><h3>CLOUD DATA<br/>ENGINEERING</h3><span>Azure / ADF / Databricks / Delta</span></article><article><p>2026</p><h3>AI + DATA<br/>SYSTEMS</h3><span>Certified Databricks engineering + intelligent products</span></article></div>
+        <div class="certs reveal"><p>VERIFIED KNOWLEDGE</p><span>DATABRICKS DATA ENGINEER PROFESSIONAL</span><span>DATABRICKS DATA ENGINEER ASSOCIATE</span><span>CLOUD COMPUTING / NPTEL</span><span>CLOUD SECURITY FOUNDATIONS / AWS</span></div>
+      </section>
+
+      <section class="panel contact" id="contact" data-chapter="05">
+        <p class="eyebrow">05 / OPEN CHANNEL</p><h2 class="reveal">LET'S BUILD<br/><em>SOMETHING.</em></h2><p class="contact__prompt reveal">Data platform to design?<br/>AI workflow to ship?<br/>3D technical experience to prototype?</p>
+        <a class="email reveal" href="mailto:kgssharish@gmail.com">KGSSHARISH@<br/>GMAIL.COM <b>+</b></a>
+        <footer><span>HARISH.SYS 2026</span><a href="https://github.com/S-HARISH44" target="_blank" rel="noreferrer">GITHUB +</a><a href="https://www.linkedin.com/in/kgssharish/" target="_blank" rel="noreferrer">LINKEDIN +</a><span>MADE WITH INTENT</span></footer>
+      </section>
+    </main>
+    <div class="toast" id="toast"></div><script src="app.js"></script>
+  </body>
+</html>
