@@ -17,7 +17,7 @@ const detail=document.querySelector('#pipelineDetail');
 const nodes=[...document.querySelectorAll('[data-node]')];
 let activeNode=0;
 function setNode(next){const node=nodes[next%nodes.length];activeNode=next%nodes.length;nodes.forEach(x=>x.classList.remove('active'));node.classList.add('active');detail.classList.add('is-changing');setTimeout(()=>{detail.textContent=details[node.dataset.node];detail.classList.remove('is-changing')},130)}
-nodes.forEach((n,i)=>n.addEventListener('click',()=>setNode(i)));
+nodes.forEach((n,i)=>n.addEventListener('mouseenter',()=>setNode(i)));
 setNode(0);
 setInterval(()=>setNode(activeNode+1),4200);
 
@@ -28,17 +28,13 @@ function scrollState(){const y=scrollY/(document.documentElement.scrollHeight-in
 addEventListener('scroll',scrollState,{passive:true});
 
 const revealTargets=[...document.querySelectorAll('.panel,.reveal')];
-const counters=[...document.querySelectorAll('[data-count]')];
-const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');if(entry.target.classList.contains('metrics__grid')) runCounters();}})},{threshold:.18});
+const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');}else{entry.target.classList.remove('in-view');}})},{threshold:.18});
 revealTargets.forEach(el=>io.observe(el));
-io.observe(document.querySelector('.metrics__grid'));
-let counted=false;
-function runCounters(){if(counted)return;counted=true;counters.forEach(el=>{const target=parseFloat(el.dataset.count);const decimals=String(target).includes('.')?1:0;const start=performance.now();function tick(now){const p=Math.min(1,(now-start)/1300);const eased=1-Math.pow(1-p,3);el.textContent=(target*eased).toFixed(decimals);if(p<1)requestAnimationFrame(tick);else el.textContent=target.toFixed(decimals)}requestAnimationFrame(tick)})}
 
 const canvas=document.querySelector('#world'),ctx=canvas.getContext('2d');let w,h,dpr,mouse={x:0,y:0,tx:0,ty:0},scene={progress:0,lastProgress:0,speed:0,t:0};
 const rand=(a,b)=>a+Math.random()*(b-a);let stars=[];
 function resize(){dpr=Math.min(devicePixelRatio,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(360,Math.round(w*h/5200))},()=>({x:rand(-1,1),y:rand(-1,1),z:rand(.15,1),s:rand(.5,2),p:rand(0,Math.PI*2),v:rand(.35,1.4)}))}resize();addEventListener('resize',resize);addEventListener('pointermove',e=>{mouse.tx=e.clientX/w-.5;mouse.ty=e.clientY/h-.5});
-function draw(){scene.t+=.009+Math.min(.025,Math.abs(scene.speed)*.01);scene.speed*=.9;mouse.x+=(mouse.tx-mouse.x)*.06;mouse.y+=(mouse.ty-mouse.y)*.06;ctx.clearRect(0,0,w,h);let mode=scene.progress;let isNeural=mode>.48&&mode<.72;let cx=w*.5+mouse.x*54,cy=h*.47+mouse.y*42;let glow=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.min(w,h)*.58);glow.addColorStop(0,isNeural?'rgba(167,131,255,.16)':'rgba(87,230,255,.11)');glow.addColorStop(.35,'rgba(188,255,77,.08)');glow.addColorStop(1,'rgba(5,7,13,0)');ctx.fillStyle=glow;ctx.fillRect(0,0,w,h);
+function draw(){scene.t+=.009+Math.min(.025,Math.abs(scene.speed)*.01);scene.speed*=.9;mouse.x+=(mouse.tx-mouse.x)*.06;mouse.y+=(mouse.ty-mouse.y)*.06;ctx.clearRect(0,0,w,h);let mode=scene.progress;let isNeural=false;let cx=w*.5+mouse.x*54,cy=h*.47+mouse.y*42;let glow=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.min(w,h)*.58);glow.addColorStop(0,isNeural?'rgba(167,131,255,.16)':'rgba(87,230,255,.11)');glow.addColorStop(.35,'rgba(188,255,77,.08)');glow.addColorStop(1,'rgba(5,7,13,0)');ctx.fillStyle=glow;ctx.fillRect(0,0,w,h);
  let nodes=[];for(const s of stars){let depth=.28+s.z*1.25;let orbit=scene.t*s.v+s.p+mode*4;let warp=1+Math.abs(scene.speed)*.045;let x=cx+s.x*w*.62/depth+Math.sin(orbit)*22*warp+mouse.x*s.z*30;let y=cy+s.y*h*.55/depth+Math.cos(orbit*.82)*15*warp+mouse.y*s.z*28;let focus=mode<.22?1:mode<.45?(.75+Math.sin(s.p*3)*.25):isNeural?.95:.55;let alpha=(.12+s.z*.48)*focus;ctx.fillStyle=`rgba(${isNeural?'167,131,255':'188,255,77'},${alpha})`;ctx.beginPath();ctx.arc(x,y,s.s*depth*(1+Math.abs(scene.speed)*.018),0,7);ctx.fill();if(s.z>.65)nodes.push({x,y,z:s.z})}
  ctx.lineWidth=.45;ctx.strokeStyle=isNeural?'rgba(167,131,255,.2)':'rgba(87,230,255,.16)';for(let i=0;i<nodes.length;i+=2){const a=nodes[i],b=nodes[(i*7+3)%nodes.length];if(b&&Math.hypot(a.x-b.x,a.y-b.y)<165){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}
  for(let i=0;i<5;i++){let y=(h*((scene.t*.06+i*.22+mode*.9)%1));ctx.strokeStyle=`rgba(188,255,77,${.02+i*.005})`;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y+mouse.y*26);ctx.stroke()}
