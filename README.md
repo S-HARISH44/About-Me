@@ -1,20 +1,45 @@
-# HARISH.SYS
+# HARISH / PORTFOLIO
 
-A dependency-free immersive portfolio, ready to preview by opening `index.html` in any modern browser.
+<div align="center">
+  <h3>DATA ENGINEER <b>x</b> AI SYSTEMS <b>x</b> SOFTWARE <b>x</b> 3D</h3>
+  <p>A high-performance, scroll-driven digital experience rendering professional trajectory as a cinematic data system.</p>
+</div>
 
-This pass uses the attached resume as reference material, but the site copy is intentionally distilled for portfolio impact instead of copied line-for-line.
+<br/>
 
-## Included
+## ⬢ ARCHITECTURE & TECH STACK
 
-- Procedural 3D-style data-core canvas responding to cursor movement and scroll position
-- Boot sequence, HUD navigation, scroll progress, active menu states, and responsive mobile layout
-- Scroll reveal transitions, animated counters, hover motion, pipeline pulse effects, and auto-cycling data nodes
-- Cinematic chapters for data engineering, AI/software systems, neural graphics, professional trajectory, and contact
-- Resume-grounded details: Azure/ADF/ADLS/Databricks/Delta, Vapi/React, Firebase, NeRF/Unreal/COLMAP, and cited performance signals
-- Verified GitHub and LinkedIn links from the current resume
+This portfolio operates entirely without heavy JavaScript frameworks, relying on a custom-built, zero-dependency architecture:
+- **Core Rendering**: HTML5 Canvas (`#world`) driven by native `requestAnimationFrame`.
+- **Styling**: Vanilla CSS3 with fluid variables, custom scroll-triggers (`IntersectionObserver`), and hardware-accelerated animations.
+- **Interactions**: Minimal Vanilla JS for state management, observer APIs, and dynamic DOM manipulation.
 
-## Next pass
+## ⬢ CORE SYSTEMS
 
-1. Add an actual resume PDF link and optional project case-study URLs.
-2. Move the canvas logic to Three.js / React Three Fiber if this version is being integrated into a Next.js or Vite project.
-3. Add project screenshots or generated visual assets once the final case studies are chosen.
+- **Immersive 3D Starfield**: A procedural background reacting smoothly to user scroll velocity and mouse interpolation.
+- **Boot Sequence Simulation**: A custom CLI-style loading screen ensuring the aesthetic is established before rendering.
+- **Live Data Nodes**: An interactive pipeline visualization component mapping out Azure, ADLS, and Databricks ETL workflows.
+- **Cinematic Reveals**: Hardware-accelerated entrance animations triggering dynamically on viewport entry and exit.
+
+## ⬢ LOCAL DEPLOYMENT
+
+The project is statically hosted and fully self-contained. No build step is required. 
+
+```bash
+git clone https://github.com/S-HARISH44/About-Me.git
+cd About-Me
+# Launch index.html in your preferred browser
+```
+
+## ⬢ CONTACT PROTOCOL
+**Developer:** Harish S.  
+**Location:** Hyderabad, India  
+**LinkedIn:** [linkedin.com/in/s-harish44](https://www.linkedin.com/in/s-harish44/)  
+**GitHub:** [github.com/S-HARISH44](https://github.com/S-HARISH44)
+
+<br/>
+
+---
+<div align="center">
+  <small>SYSTEM ONLINE /// 2026</small>
+</div>
