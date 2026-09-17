@@ -1,35 +1,61 @@
-# HARISH / PORTFOLIO
+# HARISH.SYS / Personal Portfolio
 
-<div align="center">
-  <h3>DATA ENGINEER <b>x</b> AI SYSTEMS <b>x</b> SOFTWARE <b>x</b> 3D</h3>
-  <p>A high-performance, scroll-driven digital experience rendering professional trajectory as a cinematic data system.</p>
-</div>
+> **Data Engineer · AI Automation Developer · Real-time 3D Builder**
 
-<br/>
+An interactive, scroll-driven portfolio that presents Harish S.’s work as a living technical system. The experience combines a procedural canvas starfield, boot-sequence UI, animated project case studies, and a responsive layout that works across desktop, tablet, and mobile.
 
-## ⬢ ARCHITECTURE & TECH STACK
+## What’s inside
 
-This portfolio operates entirely without heavy JavaScript frameworks, relying on a custom-built, zero-dependency architecture:
-- **Core Rendering**: HTML5 Canvas (`#world`) driven by native `requestAnimationFrame`.
-- **Styling**: Vanilla CSS3 with fluid variables, custom scroll-triggers (`IntersectionObserver`), and hardware-accelerated animations.
-- **Interactions**: Minimal Vanilla JS for state management, observer APIs, and dynamic DOM manipulation.
+### Data systems
 
-## ⬢ CORE SYSTEMS
+- **Protech IoT Ingestion & Decoding** — multi-tenant TCP telemetry ingestion with packet framing, checksum validation, deterministic deduplication, Azure Event Hubs publishing, and Databricks/Delta processing.
+- **Weather Data Pipeline** — parameterized Azure Data Factory orchestration using PostgreSQL store lookups, parallel API ingestion, ADLS landing, and Databricks Silver processing.
 
-- **Immersive 3D Starfield**: A procedural background reacting smoothly to user scroll velocity and mouse interpolation.
-- **Boot Sequence Simulation**: A custom CLI-style loading screen ensuring the aesthetic is established before rendering.
-- **Live Data Nodes**: An interactive pipeline visualization component mapping out Azure, ADLS, and Databricks ETL workflows.
-- **Cinematic Reveals**: Hardware-accelerated entrance animations triggering dynamically on viewport entry and exit.
+### AI and immersive software
 
-## ⬢ CONTACT PROTOCOL
-**Developer:** Harish S.  
-**Location:** Hyderabad, India  
-**LinkedIn:** [linkedin.com/in/s-harish44](https://www.linkedin.com/in/s-harish44/)  
-**GitHub:** [github.com/S-HARISH44](https://github.com/S-HARISH44)
+- **AI Interview Automation** — two-stage HR and technical screening with five job-description-specific Vapi agents; Make delivers scores, transcripts, and summaries to recruiters.
+- **Immersive 3D Interview** — Unreal Engine office environment with handcrafted MetaHumans and Convai conversational interaction.
+- **Gamified Learning Platform** — interactive course and language-learning experiences built with real-time 3D and gameplay-oriented interaction.
 
-<br/>
+## Experience represented
+
+| Organization | Focus |
+|---|---|
+| SARRAL / Protech Client | Azure data engineering, IoT telemetry, TCP services, Event Hubs, Databricks, Delta Lake |
+| Sagarsoft | Vapi interview automation, Make workflows, Unreal Engine, MetaHuman, Convai |
+
+## Technology palette
+
+`Python` `SQL` `Azure Data Factory` `Azure Databricks` `PySpark` `Apache Spark` `Delta Lake` `ADLS Gen2` `Azure Event Hubs` `PostgreSQL` `TCP/IP` `Docker` `Vapi` `Make` `Convai` `Unreal Engine` `MetaHuman`
+
+## Design and architecture
+
+- **Canvas rendering:** native HTML5 Canvas with a procedural starfield, parallax mouse response, scroll velocity, and animated data-core visuals.
+- **Motion system:** CSS transitions, `IntersectionObserver` reveal states, hover interactions, pipeline-node pulses, and chapter progress tracking.
+- **Responsive UI:** fluid typography, mobile navigation, touch-friendly controls, and layout breakpoints for smaller screens.
+- **Dependency-light:** static HTML, CSS, and JavaScript; no framework is required to view the portfolio.
+
+## Run locally
+
+```bash
+git clone https://github.com/S-HARISH44/About-Me.git
+cd About-Me
+```
+
+Open `index.html` directly in a browser, or serve the folder with any local static server. For example, with Node.js:
+
+```bash
+npx serve .
+```
+
+The portfolio’s **VIEW RESUME** links open the included `Harish_Resume.html` file.
+
+## Connect
+
+- **LinkedIn:** [linkedin.com/in/kgssharish](https://www.linkedin.com/in/kgssharish/)
+- **GitHub:** [github.com/S-HARISH44](https://github.com/S-HARISH44)
+- **Email:** kgssharish@gmail.com
 
 ---
-<div align="center">
-  <small>SYSTEM ONLINE /// 2026</small>
-</div>
+
+<div align="center">SYSTEM ONLINE /// 2026</div>
