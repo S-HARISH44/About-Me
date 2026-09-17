@@ -35,18 +35,6 @@ An interactive, scroll-driven portfolio that presents Harish S.’s work as a li
 - **Responsive UI:** fluid typography, mobile navigation, touch-friendly controls, and layout breakpoints for smaller screens.
 - **Dependency-light:** static HTML, CSS, and JavaScript; no framework is required to view the portfolio.
 
-## Run locally
-
-```bash
-git clone https://github.com/S-HARISH44/About-Me.git
-cd About-Me
-```
-
-Open `index.html` directly in a browser, or serve the folder with any local static server. For example, with Node.js:
-
-```bash
-npx serve .
-```
 
 The portfolio’s **VIEW RESUME** links open the included `Harish_Resume.html` file.
 
