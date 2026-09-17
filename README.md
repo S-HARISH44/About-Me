@@ -21,16 +21,6 @@ This portfolio operates entirely without heavy JavaScript frameworks, relying on
 - **Live Data Nodes**: An interactive pipeline visualization component mapping out Azure, ADLS, and Databricks ETL workflows.
 - **Cinematic Reveals**: Hardware-accelerated entrance animations triggering dynamically on viewport entry and exit.
 
-## ⬢ LOCAL DEPLOYMENT
-
-The project is statically hosted and fully self-contained. No build step is required. 
-
-```bash
-git clone https://github.com/S-HARISH44/About-Me.git
-cd About-Me
-# Launch index.html in your preferred browser
-```
-
 ## ⬢ CONTACT PROTOCOL
 **Developer:** Harish S.  
 **Location:** Hyderabad, India  
