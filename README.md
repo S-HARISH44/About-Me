@@ -45,5 +45,3 @@ The portfolio’s **VIEW RESUME** links open the included `Harish_Resume.html` f
 - **Email:** kgssharish@gmail.com
 
 ---
-
-<div align="center">SYSTEM ONLINE /// 2026</div>
